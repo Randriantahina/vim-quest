@@ -4,6 +4,6 @@ Un jeu solo en français pour apprendre Vim et Neovim. La campagne contient 52 �
 
 ## Jouer
 
-Ouvre `index.html` dans ton navigateur. Commence par « Recommencer » si tu veux reprendre au premier étage. Les premières salles te font explorer un labyrinthe ; ensuite, le buffer montre du code réel à modifier. Tape une commande Vim et appuie sur Entrée. En mode insertion, tape le texte, valide-le puis appuie sur Échap pour revenir au mode normal. Le mémo des commandes est replié dans la colonne de droite.
+Ouvre `index.html` dans ton navigateur. Le bouton « Étages » permet de reprendre ou choisir une salle. Ta salle actuelle et ta progression sont sauvegardées dans le navigateur ; « Effacer » remet la campagne à zéro. Les premières salles te font explorer un labyrinthe ; ensuite, le buffer montre du code à modifier. Tape une commande Vim et appuie sur Entrée. En mode insertion, tape le texte, valide-le puis appuie sur Échap pour revenir au mode normal. Le mémo des commandes est replié dans la colonne de droite.
 
 La progression est stockée localement dans le navigateur. Le bouton « Recommencer » remet la campagne à zéro.

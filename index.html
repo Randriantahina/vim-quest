@@ -12,7 +12,8 @@
     <header class="topbar">
       <a class="brand" href="#" aria-label="Vim Quest accueil"><span class="brand-mark">V</span><span>VIM QUEST<small>LE DONJON DU CODE</small></span></a>
       <div class="top-meta"><span class="live-dot"></span> CAMPAGNE SOLO <span class="separator">/</span> <span id="level-label">ÉTAGE 01</span></div>
-      <button id="reset" class="reset-button" title="Recommencer la partie">↺ <span>RECOMMENCER</span></button>
+      <div class="level-picker"><button id="levels-button" class="levels-button" aria-expanded="false" aria-controls="level-menu">ÉTAGES <span>▾</span></button><div id="level-menu" class="level-menu" hidden aria-label="Choisir un étage"></div></div>
+      <button id="reset" class="reset-button" title="Effacer toute la progression">↺ <span>EFFACER</span></button>
     </header>
 
     <section class="game-layout">
