@@ -14,3 +14,5 @@
 @keyframes pop{from{transform:scale(.85);opacity:0}to{transform:none;opacity:1}}
 .editor-cursor{animation:blink 1.1s steps(1) infinite}@keyframes blink{50%{opacity:.55}}
 @media(max-width:850px){.footer-actions{display:none}}
+.editor-shell.active~canvas{display:none}
+.game-footer{flex-wrap:wrap;gap:8px 14px}.game-footer>span:first-child{white-space:nowrap}
