@@ -41,7 +41,7 @@ g.idx = lvl('scroll.js'); g.start(); play('3dd');
 if (g.e.lines.length !== 6) { failed++; console.log('FAIL 3dd', g.e.lines.length); }
 g.idx = lvl('scroll.js'); g.start(); play('5G');
 if (g.e.row !== 4) { failed++; console.log('FAIL 5G', g.e.row); }
-g.idx = lvl('auth.js'); g.start(); play('2x');
-if (g.e.lines[0] !== 'if (isReady) return;'.replace('(!','(!').slice(0, 4) + 'isReady) return;'.slice(0) && g.e.lines[0].length !== 19) { failed++; console.log('FAIL 2x', g.e.lines[0]); }
+g.idx = lvl('scroll.js'); g.start(); play('3x');
+if (g.e.lines[0] !== 'ction one() {') { failed++; console.log('FAIL 3x', g.e.lines[0]); }
 console.log(failed ? `${failed} étage(s) en échec` : `OK : ${g.L.filter(l => l.editor).length} étages d'édition résolus au clavier`);
 process.exit(failed ? 1 : 0);
