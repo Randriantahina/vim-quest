@@ -1,6 +1,6 @@
 # Vim Quest — Le donjon du code
 
-Un jeu solo en français pour apprendre Vim et Neovim. La campagne contient 41 étages : déplacements, insertion, suppressions, changements, copier/coller et registres, annulation/répétition, recherche, sélection visuelle, objets texte, macros, substitutions, fichiers, buffers et options. Les étages avancés affichent un vrai buffer d’exercice et vérifient son résultat.
+Un jeu solo en français pour apprendre Vim et Neovim. La campagne contient 52 étages : déplacements, insertion, suppressions, changements, copier/coller et registres, annulation/répétition, recherche, sélection visuelle, objets texte, macros, substitutions, fichiers, buffers, marques, fenêtres et options. Les étages avancés affichent un buffer de code et vérifient son résultat.
 
 ## Jouer
 
