@@ -1,22 +1,32 @@
-# Vim Quest — Arcade
+# Vim Quest — Entraînement
 
-Un jeu d'arcade en français pour apprendre Vim et Neovim. Des fragments de code tombent du ciel : chacun montre le code d'origine, une flèche ▼ et le résultat attendu. Tape la commande Vim qui fait la transformation avant qu'ils touchent ta base.
+Apprendre Vim et Neovim **en pratiquant, sans lire de manuel**. Chaque défi te place devant un vrai éditeur : l'objectif est affiché à droite, tu le réalises à gauche, touche par touche.
 
-- **58 commandes en 11 thèmes** : h j k l, mots et lignes, f/t, suppression, insertion, changement, copier/coller/annuler, `dt`/`df`/`ct`, objets texte (`ci"`, `di(`…), compteurs, mode visuel, indentation.
-- **Tu tapes pour de vrai**, touche par touche, sans Entrée. La carte visée affiche en direct le résultat de ce que tu tapes, mode insertion compris.
-- **Progression guidée** : une nouvelle famille de commandes à chaque vague, avec une fiche d'exemples. Les touches sont affichées tant que tu ne maîtrises pas une commande, puis cachées ; celles que tu rates reviennent plus souvent.
-- Combos, score, vies, record sauvegardé, mode entraînement par thème (sans vies), son optionnel.
+- **On apprend en faisant** : la 1re fois, les touches s'allument une par une ; la 2e, elles n'apparaissent que si tu hésites ; la 3e, tu fais tout seul.
+- **L'explication vient après l'action** : une fois la commande réussie, tu vois pourquoi elle s'écrit ainsi (`d` = delete, `w` = word…).
+- **Toutes les techniques sont acceptées** : seul le résultat compte. Si tu as pris le chemin long, le jeu te montre la version experte et te donne 1 à 3 étoiles.
+- **Révision espacée** : une commande réussie sans aide revient de plus en plus tard ; une commande ratée ou aidée revient vite.
+- Une commande à la fois (58 au total, ordonnées du plus utile au plus fin), sessions de 10 défis, XP, niveaux, série de réussites, carte de progression.
+- `Tab` recommence le défi, `Échap` quitte l'insertion, « Je suis bloqué » montre les touches (sans pénalité cachée : la commande reviendra juste plus tôt).
 
 ## Jouer
 
-Ouvre `index.html` dans ton navigateur (ou `python3 -m http.server`), puis **Entrée** pour jouer. **Échap** annule ta saisie en cours ; sans saisie, il met en pause.
+Ouvre `index.html` dans ton navigateur (ou `python3 -m http.server`). La progression est sauvegardée dans le navigateur.
 
-La **campagne classique** (52 étages d'exercices sur un vrai buffer de code) reste disponible dans `campagne.html`.
+Autres modes : `arcade.html` (cartes de code qui tombent, à réserver à la révision) et `campagne.html` (campagne classique de 52 étages).
+
+## Architecture
+
+- `vimcore.js` : mini-Vim (normal, insertion, visuel) qui calcule le résultat réel de chaque commande.
+- `drills.js` : 58 commandes, 135 exercices (tampon de départ + touches ; le résultat est calculé).
+- `learn.js` : pédagogie (ordre, révision espacée, étoiles, explications).
+- `dojo.js` / `dojo.css` : interface de l'entraînement.
 
 ## Tests
 
-- `node tests/vim.test.js` vérifie le mini-Vim (`vimcore.js`) et chacun des 135 exercices de l'arcade.
-- `node tests/run.js` rejoue les 47 étages d'édition de la campagne classique.
+- `node tests/vim.test.js` : le mini-Vim et chacun des 135 exercices.
+- `node tests/learn.test.js` : l'ordre d'apprentissage, les révisions, les explications.
+- `node tests/run.js` : les 47 étages d'édition de la campagne classique.
 
 ## Campagne classique (campagne.html)
 

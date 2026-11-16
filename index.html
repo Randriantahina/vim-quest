@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e1514">
+  <title>VIM QUEST — Entraînement</title>
+  <link rel="stylesheet" href="dojo.css">
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="brand"><span class="brand-mark">V</span><span>VIM QUEST<small>ENTRAÎNEMENT</small></span></div>
+      <div class="level">
+        <span id="lv">NIV. 1</span>
+        <div class="xpbar"><i id="xp-fill"></i></div>
+        <span id="xp-txt" class="muted">0 XP</span>
+      </div>
+      <div class="streak" title="Réussites d’affilée sans aide"><span>🔥</span><b id="streak">0</b></div>
+      <div id="dots" class="dots" title="Progression de la session"></div>
+      <nav class="nav">
+        <button id="b-map" class="pill">🗺 Carte des commandes</button>
+        <a class="pill" href="arcade.html">🎮 Mode arcade</a>
+      </nav>
+    </header>
+
+    <section id="stage" class="stage">
+      <div class="task">
+        <div><div id="t-tag" class="tag">NOUVELLE COMMANDE</div><h1 id="t-title">…</h1></div>
+        <div class="tools">
+          <button id="b-reset" class="pill">↺ Recommencer <kbd>Tab</kbd></button>
+          <button id="b-hint" class="pill">💡 Je suis bloqué</button>
+        </div>
+      </div>
+
+      <div class="duo">
+        <div class="pane editor">
+          <div class="pane-h"><span>TON ÉDITEUR</span><span class="muted">tape directement</span></div>
+          <div id="ed" class="code"></div>
+          <div class="status"><span id="st-mode" class="st-mode">NORMAL</span><span id="st-file">main.js</span><span id="st-cmd" class="st-cmd"></span><span id="st-pos">1:1</span></div>
+        </div>
+        <div class="pane goal">
+          <div class="pane-h"><span>OBJECTIF</span><span class="muted">le résultat à obtenir</span></div>
+          <div id="goal" class="code"></div>
+          <div id="goal-note" class="goal-note"></div>
+        </div>
+      </div>
+
+      <div id="coach" class="coach"></div>
+      <div id="feedback" class="feedback" hidden></div>
+    </section>
+  </main>
+  <div id="overlay" class="overlay"></div>
+  <script src="vimcore.js"></script>
+  <script src="drills.js"></script>
+  <script src="learn.js"></script>
+  <script src="dojo.js"></script>
+</body>
+</html>

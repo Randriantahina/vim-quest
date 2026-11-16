@@ -248,7 +248,7 @@
       '<div class="tag" style="margin-top:20px">OU ENTRAÎNE-TOI SUR UN THÈME (SANS VIES)</div>' +
       '<div class="chips">' + GROUPS.map((g, i) => '<button class="chip" data-g="' + i + '">' + (i + 1) + '. ' + esc(g.title) + '</button>').join('') + '</div>' +
       '<div class="best">RECORD ' + save.best + ' · VAGUE ' + save.bestWave + '</div>' +
-      '<p class="link"><a href="campagne.html" style="color:inherit">Campagne classique (52 étages)</a></p></div>');
+      '<p class="link"><a href="index.html" style="color:inherit">← Retour à l’entraînement</a> · <a href="campagne.html" style="color:inherit">Campagne classique</a></p></div>');
   }
 
   function intro(gi, then) {
