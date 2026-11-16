@@ -26,12 +26,12 @@
 
         <section class="game-frame card" aria-label="Zone de jeu">
           <div class="game-hud"><span><i class="hud-dot"></i> DONJON : <b id="room-name">LE HALL DES TOUCHES</b></span><span>ÉNERGIE <b id="moves">00</b></span></div>
-          <div class="canvas-wrap"><section id="editor-shell" class="editor-shell" aria-label="Buffer de code"><div class="editor-title"><span class="editor-file">●</span><span id="editor-filename">main.js</span><span id="editor-mode">NORMAL</span></div><div id="editor-code" class="editor-code"></div><div class="editor-goal" id="editor-goal"></div></section><canvas id="game" width="720" height="432" aria-label="Jeu de labyrinthe Vim Quest"></canvas><div id="toast" class="toast" aria-live="polite"></div></div>
-          <div class="game-footer"><span><kbd>ESC</kbd> mode normal <span class="footer-sep">·</span> <kbd>?</kbd> aide</span><span id="status">PRÊT À EXPLORER</span></div>
+          <div class="canvas-wrap"><section id="editor-shell" class="editor-shell" aria-label="Buffer de code"><div class="editor-title"><span class="editor-file">●</span><span id="editor-filename">main.js</span><span id="editor-mode">NORMAL</span></div><div id="editor-code" class="editor-code"></div><div class="editor-goal" id="editor-goal"></div></section><canvas id="game" width="720" height="432" aria-label="Jeu de labyrinthe Vim Quest"></canvas><div id="hint-box" class="hint-box" hidden></div><div id="success" class="success" hidden><div class="success-card"><div class="success-star">★</div><strong>Étage réussi !</strong><span id="success-text">Bien joué.</span><button id="next-button" class="next-button">SUITE <kbd>ENTRÉE</kbd></button></div></div><div id="toast" class="toast" aria-live="polite"></div></div>
+          <div class="game-footer"><span><kbd>ESC</kbd> mode normal <span class="footer-sep">·</span> <kbd>F1</kbd> indice <span class="footer-sep">·</span> <kbd>:</kbd> ligne de commande</span><span class="footer-actions"><button id="hint-button" class="mini-button">💡 INDICE</button><button id="retry-button" class="mini-button">↻ RECOMMENCER L’ÉTAGE</button></span><span id="status">PRÊT À EXPLORER</span></div>
         </section>
 
         <section class="command-bar card">
-          <div class="command-icon">❯</div><div class="command-body"><label for="command-input">COMMANDE VIM</label><input id="command-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Tape une commande… (ex : 3j)" aria-label="Commande Vim"></div><div class="command-hint"><span>ENTRÉE</span><small>exécuter</small></div>
+          <div class="command-icon">❯</div><div class="command-body"><label id="bar-label" for="command-input">MODE NORMAL</label><input id="command-input" readonly tabindex="-1" autocomplete="off" placeholder="Tape directement au clavier : plus besoin d’Entrée" aria-label="Touches tapées"></div><div class="command-hint"><span>LIVE</span><small>chaque touche compte</small></div>
         </section>
 
         <div class="key-guide"><span class="guide-label">TOUCHES RAPIDES</span><span><kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd> <small>bouger</small></span><span><kbd>0</kbd><kbd>$</kbd> <small>début / fin</small></span><span><kbd>gg</kbd><kbd>G</kbd> <small>haut / bas</small></span><span><kbd>u</kbd> <small>annuler</small></span></div>
@@ -47,5 +47,6 @@
     <footer class="bottomline"><span>UN PETIT DONJON. DE GRANDES HABITUDES.</span><span>FAIT POUR APPRENDRE <b>VIM & NEOVIM</b></span></footer>
   </main>
   <script src="game.js"></script>
+  <script src="keys.js"></script>
 </body>
 </html>
